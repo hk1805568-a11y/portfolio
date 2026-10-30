@@ -1,0 +1,979 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harleen Kaur | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --black: #080808;
+    --card: #151515;
+    --purple: #a855f7;
+    --white: #ffffff;
+    --gray: #aaaaaa;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--black);
+    color: var(--white);
+}
+
+/* NAVBAR */
+
+header {
+    background: #101010;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--purple);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+/* HOME */
+
+.home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 8%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    color: var(--purple);
+    font-size: 23px;
+}
+
+.home-content h1 {
+    font-size: 58px;
+    margin: 15px 0;
+}
+
+.home-content p {
+    color: var(--gray);
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.profile {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a855f7, #451080);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    font-weight: bold;
+    border: 7px solid #252525;
+    box-shadow: 0 0 35px #7625b7;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 25px;
+    background: var(--purple);
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #7e22ce;
+    transform: translateY(-3px);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 8%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.heading span {
+    color: var(--purple);
+}
+
+/* ABOUT */
+
+.about {
+    background: #101010;
+    text-align: center;
+}
+
+.about p {
+    max-width: 850px;
+    margin: auto;
+    color: var(--gray);
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+/* SKILLS */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.skill-box {
+    background: var(--card);
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #292929;
+    transition: .3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    border-color: var(--purple);
+}
+
+.skill-box h3 {
+    color: var(--purple);
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.skill-box p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* EDUCATION */
+
+.education {
+    background: #101010;
+    text-align: center;
+}
+
+.education-box {
+    background: var(--card);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 650px;
+    border-radius: 12px;
+    border-left: 4px solid var(--purple);
+}
+
+.education-box h3 {
+    color: var(--purple);
+    margin-bottom: 10px;
+}
+
+.education-box p {
+    color: var(--gray);
+}
+
+/* PROJECTS */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+.project-box {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #303030;
+    transition: .3s;
+}
+
+.project-box:hover {
+    transform: translateY(-8px);
+    border-color: var(--purple);
+    box-shadow: 0 0 20px #a855f722;
+}
+
+.project-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.project-box h3 {
+    color: var(--purple);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.project-box p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.project-box .btn {
+    margin-top: 20px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #101010;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #202020;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 130px;
+}
+
+.contact-form button {
+    margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050505;
+    padding: 25px;
+    text-align: center;
+    color: var(--gray);
+}
+
+/* LIVE DEMO MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #171717;
+    border: 1px solid var(--purple);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.modal-content h2 {
+    color: var(--purple);
+    margin-bottom: 20px;
+}
+
+/* TODO APP */
+
+.todo-input {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.todo-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    background: #252525;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 6px;
+}
+
+.todo-input button {
+    padding: 12px 16px;
+    background: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    background: #252525;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    overflow-wrap: anywhere;
+}
+
+.task-text {
+    flex: 1;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CALCULATOR */
+
+.calculator {
+    background: #222;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+#display {
+    width: 100%;
+    height: 65px;
+    margin-bottom: 15px;
+    background: #080808;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+    font-size: 27px;
+    text-align: right;
+    padding: 10px;
+}
+
+.cal-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+}
+
+.cal-buttons button {
+    padding: 17px 5px;
+    border: none;
+    border-radius: 7px;
+    background: #383838;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.cal-buttons button:hover {
+    background: var(--purple);
+}
+
+.cal-buttons .operator {
+    background: #7032a8;
+}
+
+.cal-buttons .equal {
+    background: var(--purple);
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 42px;
+    }
+
+    .profile {
+        width: 200px;
+        height: 200px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <div class="logo">Harleen.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<section class="home" id="home">
+
+    <div class="home-content">
+
+        <h3>Hello, I'm</h3>
+
+        <h1>Harleen Kaur</h1>
+
+        <h3>Student & Aspiring Web Designer</h3>
+
+        <p>
+            I am pursuing HTWD from HHIIT,
+            Ambala City. I have completed my
+            12th class and have good knowledge
+            of MS Office, HTML and CSS.
+
+            I love learning new technologies
+            and creating attractive websites.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+    </div>
+
+    <div class="profile">HK</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2 class="heading">About <span>Me</span></h2>
+
+    <p>
+        My name is Harleen Kaur. I am a passionate
+        and hardworking student pursuing HTWD from
+        HHIIT, Ambala City. I have completed my
+        12th class. I have good knowledge of
+        MS Office, HTML and CSS.
+
+        I am interested in web designing and
+        technology. My goal is to improve my
+        technical skills and become a successful
+        professional.
+    </p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+
+        <div class="skill-box">
+            <h3>HTML</h3>
+            <p>Creating the structure of websites using HTML.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>CSS</h3>
+            <p>Designing beautiful and responsive websites.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>MS Word</h3>
+            <p>Creating and formatting professional documents.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>MS Excel</h3>
+            <p>Organising data and working with spreadsheets.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>PowerPoint</h3>
+            <p>Creating professional presentations.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>JavaScript</h3>
+            <p>Learning JavaScript for interactive websites.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section class="education" id="education">
+
+    <h2 class="heading">My <span>Education</span></h2>
+
+    <div class="education-box">
+        <h3>12th Class Completed</h3>
+        <p>Higher Secondary Education</p>
+    </div>
+
+    <div class="education-box">
+        <h3>Currently Pursuing HTWD</h3>
+        <p>HHIIT, Ambala City</p>
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="heading">My Mini <span>Projects</span></h2>
+
+    <div class="project-container">
+
+        <!-- TODO PROJECT -->
+
+        <div class="project-box">
+
+            <div class="project-icon">📝</div>
+
+            <h3>To-Do List</h3>
+
+            <p>
+                A simple task management application.
+                Add tasks, mark them as completed
+                and delete tasks whenever required.
+                Created using HTML, CSS and JavaScript.
+            </p>
+
+           <a href="todo.html" class="btn" target="_blank">
+    Live Demo ↗
+</a>
+
+        </div>
+
+        <!-- CALCULATOR PROJECT -->
+
+        <div class="project-box">
+
+            <div class="project-icon">🧮</div>
+
+            <h3>Calculator</h3>
+
+            <p>
+                A functional calculator that performs
+                addition, subtraction, multiplication
+                and division using JavaScript.
+            </p>
+
+            <a href="cal.html" class="btn" target="_blank">
+    Live Demo ↗
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="heading">Contact <span>Me</span></h2>
+
+    <div class="contact-form">
+
+        <form id="contactForm">
+
+            <input type="text"
+                   id="name"
+                   placeholder="Enter Your Name"
+                   required>
+
+            <input type="email"
+                   id="email"
+                   placeholder="Enter Your Email"
+                   required>
+
+            <textarea id="message"
+                      placeholder="Write Your Message"
+                      required></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 Harleen Kaur | All Rights Reserved</p>
+</footer>
+
+
+<!-- TODO LIVE DEMO -->
+
+<div class="modal" id="todoModal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">&times;</button>
+
+        <h2>📝 My To-Do List</h2>
+
+        <div class="todo-input">
+
+            <input type="text"
+                   id="taskInput"
+                   placeholder="Enter your task...">
+
+            <button onclick="addTask()">Add</button>
+
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+</div>
+
+
+<!-- CALCULATOR LIVE DEMO -->
+
+<div class="modal" id="calculatorModal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">&times;</button>
+
+        <h2>🧮 My Calculator</h2>
+
+        <div class="calculator">
+
+            <input type="text"
+                   id="display"
+                   value="0"
+                   readonly>
+
+            <div class="cal-buttons">
+
+                <button onclick="clearDisplay()">AC</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button class="operator" onclick="appendValue('%')">%</button>
+                <button class="operator" onclick="appendValue('/')">÷</button>
+
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button class="operator" onclick="appendValue('*')">×</button>
+
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button class="operator" onclick="appendValue('-')">−</button>
+
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button class="operator" onclick="appendValue('+')">+</button>
+
+                <button onclick="appendValue('0')">0</button>
+                <button onclick="appendValue('.')">.</button>
+                <button onclick="clearDisplay()">C</button>
+                <button class="equal" onclick="calculate()">=</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// SHOW TODO DEMO
+
+function openTodo() {
+    closeModal();
+    document.getElementById("todoModal").classList.add("active");
+    document.getElementById("taskInput").focus();
+}
+
+// SHOW CALCULATOR DEMO
+
+function openCalculator() {
+    closeModal();
+    document.getElementById("calculatorModal").classList.add("active");
+}
+
+// CLOSE MODALS
+
+function closeModal() {
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.classList.remove("active");
+    });
+}
+
+// CLOSE WHEN CLICKING OUTSIDE
+
+document.querySelectorAll(".modal").forEach(modal => {
+    modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+});
+
+// TODO LIST FUNCTIONS
+
+function addTask() {
+
+    let input = document.getElementById("taskInput");
+    let task = input.value.trim();
+
+    if (task === "") {
+        alert("Please enter a task!");
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    let span = document.createElement("span");
+    span.textContent = task;
+    span.className = "task-text";
+
+    span.addEventListener("click", function() {
+        span.classList.toggle("completed");
+    });
+
+    let deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.className = "delete-btn";
+
+    deleteButton.addEventListener("click", function() {
+        li.remove();
+    });
+
+    li.appendChild(span);
+    li.appendChild(deleteButton);
+
+    document.getElementById("taskList").appendChild(li);
+
+    input.value = "";
+    input.focus();
+}
+
+// ADD TASK USING ENTER
+
+document.getElementById("taskInput")
+.addEventListener("keydown", function(event) {
+
+    if (event.key === "Enter") {
+        addTask();
+    }
+
+});
+
+// CALCULATOR FUNCTIONS
+
+let display = document.getElementById("display");
+
+function appendValue(value) {
+
+    if (display.value === "Error") {
+        display.value = "0";
+    }
+
+    if (display.value === "0" && /[0-9.]/.test(value)) {
+        display.value = value;
+    } else {
+        display.value += value;
+    }
+}
+
+function clearDisplay() {
+    display.value = "0";
+}
+
+function deleteLast() {
+    display.value = display.value.slice(0, -1) || "0";
+}
+
+// SAFE BASIC CALCULATION
+
+function calculate() {
+
+    let expression = display.value;
+
+    if (!/^[0-9+\-*/%.() ]+$/.test(expression)) {
+        display.value = "Error";
+        return;
+    }
+
+    try {
+
+        let result = Function(
+            '"use strict"; return (' + expression + ')'
+        )();
+
+        if (!Number.isFinite(result)) {
+            display.value = "Error";
+        } else {
+            display.value = String(
+                Number(result.toPrecision(12))
+            );
+        }
+
+    } catch(error) {
+        display.value = "Error";
+    }
+}
+
+// CONTACT FORM
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    // CHANGE THIS TO YOUR EMAIL ADDRESS
+    let recipient = "your-email@example.com";
+
+    let subject = encodeURIComponent(
+        "Portfolio Message from " + name
+    );
+
+    let body = encodeURIComponent(
+        message + "\n\nFrom: " + name +
+        "\nEmail: " + email
+    );
+
+    window.location.href =
+        "mailto:" + recipient +
+        "?subject=" + subject +
+        "&body=" + body;
+
+});
+
+// ESCAPE KEY TO CLOSE DEMO
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeModal();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
